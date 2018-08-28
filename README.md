@@ -6,7 +6,7 @@ LAW 20310, Fall 2018
 ## Overview
 These are design plans for a Cybersecurity classroom at Yale Law School in 40 Ashmun (Baker Hall).  Scott J. Shapiro and Sean O'Brien are developing the curriculum for [Cybersecurity 20310](https://courses.law.yale.edu/courses/course/2161) in Fall 2018 and will be assisted by Cyber Fellow Laurin Weissinger.
 
-Cybersecurity 20310 is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities. Students will learn cybersecurity and networking concepts so that they may better engage issues at the policy and regulatory level.
+This class is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities. Students will learn cybersecurity and networking concepts so that they may better engage issues at the policy and regulatory level.
 
 ## Design
 Our design allows for the exploration of cybersecurity, pentesting, and cryptographic concepts within a safe learning environment.  It is a scaled-down version of a penetration testing lab, introducing students to simple exercises through a command line interface (CLI).  Wherever possible, we have used interchangeable parts, compatible Free and Open-Source Software (FOSS), Open Hardware, and industry-standard configurations and protocols.
