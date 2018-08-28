@@ -6,12 +6,12 @@ LAW 20310, Fall 2018
 ## Overview
 These are design plans for a Cybersecurity classroom at Yale Law School in 40 Ashmun (Baker Hall).  Scott J. Shapiro and Sean O'Brien are developing the curriculum for [Cybersecurity 20310](https://courses.law.yale.edu/courses/course/2161) in Fall 2018 and will be assisted by Cyber Fellow Laurin Weissinger.
 
-Cybersecurity 20310 is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities.  We will train students to understand cybersecurity and networking concepts, so that they may better engage issues at the policy and regulatory level.
+Cybersecurity 20310 is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities. Students will learn cybersecurity and networking concepts so that they may better engage issues at the policy and regulatory level.
 
 ## Design
 Our design allows for the exploration of cybersecurity, pentesting, and cryptographic concepts within a safe learning environment.  It is a scaled-down version of a penetration testing lab, introducing students to simple exercises through a command line interface (CLI).  Wherever possible, we have used interchangeable parts, compatible Free and Open-Source Software (FOSS), Open Hardware, and industry-standard configurations and protocols.
 
-<img src="/diagrams/classroom_diagram01.png" width="100%" />
+<img src="/diagrams/classroom_diagram_simplified.png" width="100%" />
 
 The diagram above and description below refer to the design of one airgapped Local Area Network (LAN).  This design can be duplicated as necessary to accommodate more students.  Cybersecurity 20310 requires that this design be repeated for four identical LANs, to accomodate 18-20 student devices (and a maximum of 32 devices for potential guests or work outside of the scope of the class).
 
@@ -55,131 +55,94 @@ Students will connect to their Raspberry Pi devices from a terminal emulator/CLI
 
 * **SSH:** A Secure Shell (SSH) client is required to connect to each Raspberry Pi.  Windows and macOS users are encouraged to install the [FileZilla Client](https://filezilla-project.org), which will also provide [PuTTY](https://putty.org) for SSH connections.  GNU/Linux users may install the `filezilla` package, but will also need to install a package such as `openssh-server` to make SSH connections.
 
-* **Config File:** After installing Hyper and FileZilla/PuTTY, a configuration script must be installed for SSH connections.  Windows users must [download this file](https://github.com/zeit/hyper/issues/1375) and save it as `C:\Program Files\hyper\hyper.js`.  Mac users must [download this file](https://github.com/zeit/hyper/issues/1375) and save it as `~\hyper.js`.
+* **Config File:** After installing Hyper and FileZilla/PuTTY, a configuration script must be installed for SSH connections.  Windows users must [download this file](https://github.com/zeit/hyper/issues/1375) and save it as `C:\Program Files\hyper\hyper.js`.
 
-## Classes of Attack
-Conceptual basis for examples used in the classroom.  Will vary as class develops.
+## Course Outline 
 
-* Regular File Access - access/modification of config/system files, DLLs, kernel image and UEFI boot
-* Elevation of Privileges - gaining root access, Web CMS access, SMTP e-mail spoofing/spam
-* Information Leakage - Network Analysis via Interception, Man-in-the-Middle (MITM), Spectre/Meltdown
-* Denial of Service - Dedicated Denial of Service (DDoS) attacks and Low-Orbit Ion Cannon (LOIC)
-* Special File / Database Access - SQL injection, poor input sanitation
-* Remote arbitrary code execution - botnets, ransomware, ETERNALBLUE
-* Misinformation - covering tracks through log modification, Phishing attempts, Cross-site scripting (XSS)
-
-## Course Outline  
-
-**Instructors:** 
-* Scott Shapiro, scott.shapiro@yale.edu & Sean O'Brien, sean.obrien@yale.edu
-* Assisted By - Laurin Weissinger, Cybersecurity Fellow, laurin.weissinger@yale.edu
-
-**Office Hours:** TBD
-
-**Course Websites:** 
-* Canvas CMS -https://yale.instructure.com/courses/38230
-* Additional Resources -https://github.com/seandiggity/yls-cybersec
-
-**Description and Objectives:**  This course is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities. Students will learn cybersecurity and networking concepts so that they may better engage issues at the policy and regulatory level.
-
-**Technical Requirements:**
-A laptop computer is required for each class.  We will be utilizing a Command Line Interface (CLI) on each laptop.  Students will communicate and control Raspberry Pi mini-computers via the Secure Shell (SSH) protocol.  Please install the software below on the laptop you will use in class. 
-* Hyper -https://hyper.is (Command Line Interface / Terminal Emulator)
-* Filezilla Client -https://filezilla-project.org (SSH / SFTP Client)
-* Atom -https://atom.io (Text Editor)
-* Git for Windows -https://gitforwindows.org (Windows users only, required for SSH)
-
-**Course Requirements:
-* **Attendance - It is very important to attend each class - indeed, attendance is mandatory.
-* **Homework -  Each class will conclude with a take-home assignment.  These must be completed to the satisfaction of the instructors.
-* **Exam - Your grade will be based on a take-home final exam.
-
- **Course Outline:
-
-**Week 1 - Practical Cybersecurity
+### Week 1 - Practical Cybersecurity
 * Our Approach
 * Digital Self-Defense
 * Classroom Network Diagram
 * Command Line Interface (CLI)
 * Raspberry Pi Assembly
 
-**Week 2 - Get to Know Your Mini-Computer
+### Week 2 - Get to Know Your Mini-Computer
 * Command Line Basics
 * Controlling Your Raspberry Pi via SSH
 * Client/Server Model
 * Intro to File Permissions
 * Edit a File
 
-**Week 3 - Operating Systems
+### Week 3 - Operating Systems
 * What is an OS?
 * The Filesystem Tree
 * Superusers
 * The Kernel
 * Userspace
 
-**Week 4 - Ownership & Permissions
+### Week 4 - Ownership & Permissions
 * Admin / root Access
 * Permissions as a Structural Design for Security
 * Principle of Least Privilege
 * Sandboxing & Isolation
 * Privilege Escalation Attacks
 
-**Week 5 - Normative Structure of a Network
+### Week 5 - Normative Structure of a Network
 * IP Address, Physical Address
 * Networking Models & Protocols (OSI Model)
 * Internet Infrastructure
 * Request/Response via the Web
 * Distributed Denial-of-Service (DDoS)
 
-**Week 6 - Network Attacks
+### Week 6 - Network Attacks
 * Domain Names
 * DNS Poisoning
 * Changing Your Pi's Network Identification
 * Ports & Firewalls
 * Man-in-the-Middle Attacks (MITM)
 
-**Week 7 - Secrecy & Encryption**
+### Week 7 - Secrecy & Encryption
 * Obfuscation & Hashes
 * Public/Private Keys
 * HTTP Encryption (SSL/TLS)
 * E-mail Encryption (PGP/GPG)
 * Weaknesses
 
-**Week 8 - Information Security**
+### Week 8 - Information Security
 * Data as a Toxic Asset
 * What is InfoSec?
 * Confidentiality
 * Integrity
 * Availability
 
-**Week 9 - Anonymity & The Dark Web**
+### Week 9 - Anonymity & The Dark Web
 * Onion Routing (Tor)
 * Virtual Private Networks (VPNs)
 * Censorship Circumvention
 * Sharing Files Anonymously
 * Cryptomarkets %would do that last to lead over to next session.
-**Week 10 - Cybercrime**
+### Week 10 - Cybercrime**
 * Cryptocurrency & Transactions
 * Ransomware
 * Fraud & Phishing
 * Data Breaches
 * Challenges for Attack Attribution
 
-**Week 11 - Chains of Trust**
+### Week 11 - Chains of Trust
 * Trusted Software Distribution
 * Software Verification
 * Hardware Assurance
 * Free & Open-Source Software
 * Static Analysis
 
-**Week 12 - Penetration Testing**
+### Week 12 - Penetration Testing
 * Cross-Site Scripting (XSS)
 * SQL Injection Attacks
 * Delivering Payloads
 * Metasploit Framework
 * Using Metasploit
 
-**Week 13 - Threat Modeling**
+### Week 13 - Threat Modeling
 * Risks and Vulnerabilities
 * Zero Day Attacks
 * Attack Scenarios
