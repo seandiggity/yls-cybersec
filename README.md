@@ -120,8 +120,9 @@ Students will connect to their Raspberry Pi devices from a terminal emulator/CLI
 * Virtual Private Networks (VPNs)
 * Censorship Circumvention
 * Sharing Files Anonymously
-* Cryptomarkets %would do that last to lead over to next session.
-### Week 10 - Cybercrime**
+* Cryptomarkets
+
+### Week 10 - Cybercrime
 * Cryptocurrency & Transactions
 * Ransomware
 * Fraud & Phishing
