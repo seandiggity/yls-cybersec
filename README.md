@@ -11,7 +11,7 @@ Cybersecurity 20310 is an introduction to cybersecurity, privacy, anonymity, and
 ## Design
 Our design allows for the exploration of cybersecurity, pentesting, and cryptographic concepts within a safe learning environment.  It is a scaled-down version of a penetration testing lab, introducing students to simple exercises through a command line interface (CLI).  Wherever possible, we have used interchangeable parts, compatible Free and Open-Source Software (FOSS), Open Hardware, and industry-standard configurations and protocols.
 
-<img src="/diagrams/classroom_diagram_simplified.png" width="100%" />
+<img src="/img/classroom_diagram_simplified.png" width="100%" />
 
 The diagram above and description below refer to the design of one airgapped Local Area Network (LAN).  This design can be duplicated as necessary to accommodate more students.  Cybersecurity 20310 requires that this design be repeated for four identical LANs, to accomodate 18-20 student devices (and a maximum of 32 devices for potential guests or work outside of the scope of the class).
 
