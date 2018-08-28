@@ -1,0 +1,248 @@
+\documentclass[11pt, a4paper]{article}
+%\usepackage{geometry}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{fancyhdr, lastpage, bbding, pmboxdraw}
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.7,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=darkblue,citecolor=darkblue,linkcolor=darkred,bookmarksnumbered,plainpages=false]{hyperref}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\rhead{ \fancyplain{}{Cybersecurity -- LAW 20310, Fall 2018} }
+%\chead{ \fancyplain{}{} }
+%\rhead{ \fancyplain{}{\today} }
+%\rfoot{\fancyplain{}{page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RO, LE] {page \thepage\ of \pageref{LastPage} }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim} % used to display code
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{lightlightgray}{gray}{0.93}
+
+\lstset{
+%language=bash,                          % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=t,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+{\LARGE \textsc{Cybersecurity}} \\
+\vspace{.2cm}
+LAW 20310, Fall 2018
+\begin{center}
+\rule{6.5in}{0.4pt}
+\begin{minipage}[t]{.75\textwidth}
+\begin{tabular}{llcccll}
+\textbf{Time:} Tuesday 10:00am -- 12:00 noon & \textbf{Place:} 40 Ashmun (Baker Hall), Rm 120 \\
+\end{tabular}
+\end{minipage}
+\rule{6.5in}{0.4pt}
+\end{center}
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\end{center}
+
+\noindent\textbf{Instructors:} \begin{itemize}
+\item Scott Shapiro, scott.shapiro@yale.edu \& Sean O'Brien, sean.obrien@yale.edu
+\item Assisted By - Laurin Weissinger, Cybersecurity Fellow, laurin.weissinger@yale.edu
+\end{itemize}
+
+\noindent\textbf{Office Hours:} TBD
+\vspace{.1cm}
+
+\noindent\textbf{Course Websites:} \begin{enumerate}
+\item Canvas CMS - \url{https://yale.instructure.com/courses/38230}
+\item Additional Resources - \url{https://github.com/seandiggity/yls-cybersec}
+\end{enumerate}
+
+\vskip.1in
+\noindent\textbf{Description and Objectives:}  This course is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities. Students will learn cybersecurity and networking concepts so that they may better engage issues at the policy and regulatory level.
+
+\vskip.1in
+\noindent\textbf{Technical Requirements:}
+A laptop computer is required for each class.  We will be utilizing a Command Line Interface (CLI) on each laptop.  Students will communicate and control Raspberry Pi mini-computers via the Secure Shell (SSH) protocol.  Please install the software below on the laptop you will use in class. 
+\begin{itemize}
+\item Hyper - \url{https://hyper.is} (Command Line Interface / Terminal Emulator)
+\item Filezilla Client - \url{https://filezilla-project.org} (SSH / SFTP Client)
+\item Atom - \url{https://atom.io} (Text Editor)
+\item Git for Windows - \url{https://gitforwindows.org} (Windows users only, required for SSH)
+\end{itemize}
+
+\vskip.1in
+\noindent\textbf{Course Requirements:}
+\begin{itemize}
+\item \textbf{Attendance} - It is very important to attend each class -- indeed, attendance is mandatory.
+\item \textbf{Homework} -  Each class will conclude with a take-home assignment.  These must be completed to the satisfaction of the instructors.
+\item \textbf{Exam} - Your grade will be based on a take-home final exam.
+\end{itemize}
+
+\vspace*{.1in}
+\noindent \textbf{Course Outline:}
+
+\vspace*{.2in}
+\noindent\textbf{Week 1 -- Practical Cybersecurity}
+\begin{enumerate}
+\item Our Approach
+\item Digital Self-Defense %Move to 13? %% SO - renamed this to be more like what I have in mind.
+\item Classroom Network Diagram
+\item Command Line Interface (CLI)
+\item Raspberry Pi Assembly
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 2 -- Get to Know Your Mini-Computer}
+\begin{enumerate}
+\item Command Line Basics
+\item Controlling Your Raspberry Pi via SSH
+\item Client/Server Model
+\item Intro to File Permissions
+\item Edit a File
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 3 -- Operating Systems}
+\begin{enumerate}
+\item What is an OS?
+\item The Filesystem Tree
+\item Superusers
+\item The Kernel
+\item Userspace
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 4 -- Ownership \& Permissions}
+\begin{enumerate}
+\item Admin / root Access
+\item Permissions as a Structural Design for Security
+\item Principle of Least Privilege
+\item Sandboxing \& Isolation
+\item Privilege Escalation Attacks
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 5 -- Normative Structure of a Network}
+\begin{enumerate}
+\item IP Address, Physical Address
+\item Networking Models \& Protocols (OSI Model)
+\item Internet Infrastructure
+\item Request/Response via the Web
+\item Distributed Denial-of-Service (DDoS)
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 6 -- Network Attacks}
+\begin{enumerate}
+\item Domain Names
+\item DNS Poisoning
+\item Changing Your Pi's Network Identification
+\item Ports \& Firewalls
+\item Man-in-the-Middle Attacks (MITM)
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 7 -- Secrecy \& Encryption}
+\begin{enumerate}
+\item Obfuscation \& Hashes
+\item Public/Private Keys
+\item HTTP Encryption (SSL/TLS)
+\item E-mail Encryption (PGP/GPG)
+\item Weaknesses
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 8 -- Information Security}
+\begin{enumerate}
+\item Data as a Toxic Asset %This needs explaining  %% SO - I'm using Bruce Schneier's definition here - https://www.schneier.com/blog/archives/2016/03/data_is_a_toxic.html  There's also a Berkman paper with Schneier and Zittrain which is a good "more reading" for the class.  I can be quick on this and/or move it to another section, but I think it's a good analogy for students.
+\item What is InfoSec?
+\item Confidentiality
+\item Integrity
+\item Availability
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 9 -- Anonymity \& The Dark Web}
+\begin{enumerate}
+\item Onion Routing (Tor)
+\item Virtual Private Networks (VPNs)
+\item Censorship Circumvention
+\item Sharing Files Anonymously
+\item Cryptomarkets %would do that last to lead over to next session.  %% SO - Sure, but I need to note to myself that attack attribution, traffic origin needs to be covered... that's obviously a big issue in international law.
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 10 -- Cybercrime}
+\begin{enumerate}
+\item Cryptocurrency \& Transactions %% SO - just a note, I'm just going to call Bitcoin a ledger, Ethereum a ledger with "smart contracts" built in, and talk about how it reduces intermediaries in money transfers.  Nothing about the actual tech in detail.
+\item Ransomware
+\item Fraud \& Phishing
+\item Data Breaches
+\item Challenges for Attack Attribution
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 11 -- Chains of Trust}
+\begin{enumerate}
+\item Trusted Software Distribution
+\item Software Verification
+\item Hardware Assurance
+\item Free \& Open-Source Software
+\item Static Analysis
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 12 -- Penetration Testing}
+\begin{enumerate}
+\item Cross-Site Scripting (XSS)
+\item SQL Injection Attacks
+\item Delivering Payloads
+\item Metasploit Framework
+\item Using Metasploit %% SO - We'll have to choose the best + most feasible examples here.
+\end{enumerate}
+
+\vspace*{.1in}
+\noindent\textbf{Week 13 -- Threat Modeling}
+\begin{enumerate}
+\item Risks and Vulnerabilities
+\item Zero Day Attacks
+\item Attack Scenarios
+\item Mitigation
+\item Operational Security (OPSEC)
+\end{enumerate}
+
+%%%%%% THE END 
+\end{document} 
