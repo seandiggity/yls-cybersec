@@ -169,7 +169,7 @@
 
 ## Connect to an ==SSH Server==
 
-* Open the ==Hyper== CLI.  Run: `ssh user@172.27.88.108`
+* Open the ==Hyper== CLI.  Run: `ssh user@172.27.1.1`
 * Type in the password `ThatWasEasy`
 * Type `y` or `yes` to say you trust the connection
 * Now, run the command `ls -lah`
@@ -186,7 +186,7 @@
 * What do you see?
 * Run: 
 
-`scp user@172.27.88.108:/home/user/Patacsil_v_Google.pdf ~/`
+`scp user@172.27.1.1:/home/user/Patacsil_v_Google.pdf ~/`
 
 * You just downloaded a PDF file from the server!
 
