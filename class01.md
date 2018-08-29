@@ -109,7 +109,7 @@
 
 * **Windows users only!** - Git [gitforwindows.org](https://gitforwindows.org)
 
-# ![45% center](img/filezilla.png)
+# ![43% center](img/filezilla.png)
 
 ----
 
@@ -121,7 +121,7 @@
 * **Atom** -  [atom.io](https://atom.io)
 
 
-# ![45% center](img/atom.png)
+# ![42% center](img/atom.png)
 
 ----
 

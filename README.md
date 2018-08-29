@@ -16,7 +16,7 @@ Our design allows for the exploration of cybersecurity, pentesting, and cryptogr
 The diagram above and description below refer to the design of one airgapped Local Area Network (LAN).  This design can be duplicated as necessary to accommodate more students.  Cybersecurity 20310 requires that this design be repeated for four identical LANs, to accomodate 18-20 student devices (and a maximum of 32 devices for potential guests or work outside of the scope of the class).
 
 ### Student Devices
-These are [Raspberry Pi](https://www.raspberrypi.org) mini-computers running the homegrown Quillux GNU/Linux operating system provided by [Yale Privacy Lab](https://privacylab.yale.edu).  Quillux is built from [Kali Linux](https://www.kali.org), an industry-standard security and forensics operating system based upon [Debian GNU/Linux](https://debian.org).
+These are [Raspberry Pi](https://www.raspberrypi.org) mini-computers running the homegrown Quillux GNU/Linux operating system provided by [Yale Privacy Lab](https://privacylab.yale.edu).  Quillux is built from [Kali GNU/Linux](https://www.kali.org), an industry-standard security and forensics operating system based upon [Debian GNU/Linux](https://debian.org).
 
 These devices are connected to the network via Ethernet cable and feature a small [OLED screen](https://learn.adafruit.com/adafruit-oled-displays-for-raspberry-pi/introduction) that displays  network (IP) address, physical (MAC) address, and bandwidth information.  Students will connect to these devices from a terminal emulator/CLI on their laptop and control them via the Secure Shell (SSH) protocol.
 
