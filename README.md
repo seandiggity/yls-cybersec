@@ -4,12 +4,12 @@
 LAW 20310, Fall 2018
 
 ## Overview
-These are design plans for a Cybersecurity classroom at Yale Law School in 40 Ashmun (Baker Hall).  Scott J. Shapiro and Sean O'Brien are developing the curriculum for [Cybersecurity 20310](https://courses.law.yale.edu/courses/course/2161) in Fall 2018 and will be assisted by Cyber Fellow Laurin Weissinger.
+These are design plans for a Cybersecurity classroom at Yale Law School in 40 Ashmun (Baker Hall).  Scott J. Shapiro and Sean O'Brien are developing the curriculum for [Cybersecurity (LAW 20310)](https://courses.law.yale.edu/courses/course/2161) in Fall 2018 and will be assisted by Cyber Fellow Laurin Weissinger.
 
 This class is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities. Students will learn cybersecurity and networking concepts so that they may better engage issues at the policy and regulatory level.
 
 ## Design
-Our design allows for the exploration of cybersecurity, pentesting, and cryptographic concepts within a safe learning environment.  It is a scaled-down version of a penetration testing lab, introducing students to simple exercises through a command line interface (CLI).  Wherever possible, we have used interchangeable parts, compatible Free and Open-Source Software (FOSS), Open Hardware, and industry-standard configurations and protocols.
+Our design allows for the exploration of cybersecurity, pentesting, and cryptographic concepts within a safe learning environment.  It is a scaled-down version of a penetration testing lab, introducing students to simple exercises through a command line interface (CLI).  We use interchangeable parts, Open Hardware, Free and Open-Source Software (FOSS), and industry-standard configurations and protocols.
 
 <img src="/img/classroom_diagram_simplified.png" width="100%" />
 
@@ -37,25 +37,29 @@ An 8-port unmanaged ("dumb") switch will be connected to the router and share th
 ### Network Analysis Device
 One Raspberry Pi will be connected to the network as a [PiRogue](https://www.youtube.com/watch?v=oIcrsuJcTPo), a device configured to intercept and analyze network traffic.  This is useful for demonstrations of Man-in-the-Middle (MITM) attacks as well as general analysis of network traffic and auditing of the privacy and security of applications (i.e. detecting "leaky" privacy settings in an app).  PiRogue is developed by [PiRanhaLysis](https://github.com/PiRanhaLysis/PiRogue) and connects to [PiPrecious](https://github.com/PiRanhaLysis/PiPrecious) for an experimental environment.
 
+### Tor Library Kiosks
+When students are first introduced to [Tor](https://torproject.org), we will utilize Tor Browser in library kiosks at the [Lillian Goldman Law Library](https://library.law.yale.edu).
+
+### FreedomBox Private Server
+For demonstrations of Tor hidden services (.onion), we will utilize [FreedomBox](https://freedombox.org) servers provided by [Yale Privacy Lab](https://privacylab.yale.edu).  FreedomBox runs on Raspberry Pi and other mini-computers, also using Debian GNU/Linux.
+
 #### Hardware Details
 * Raspberry Pi 3 Model B v1.2
 * 32 GB SD card
 * 0.96" I2C IIC serial 128x64 OLED display
 * TP-Link TL-WN722N N150 150Mbps USB WiFi
 
-## Prerequisite Configuration
+## Technical Requirements for Students
 
 ### Student Laptops
 Students will bring their own laptops to class and will connect to the network via WiFi (SSID "ylscyber") with WPA2 passphrase security.
 
-#### Command Line Interface
-Students will connect to their Raspberry Pi devices from a terminal emulator/CLI on their laptop and control them via the Secure Shell (SSH) protocol.  Students must follow the directions below.
-
-* **Hyper:** Windows users must install [Hyper](https://hyper.is) as a terminal emulator.  macOS, GNU/Linux, and other Unix-like systems already include a terminal emulator.  However, installing Hyper on these systems is recommended unless you are already very familiar with the CLI of your choice.
-
-* **SSH:** A Secure Shell (SSH) client is required to connect to each Raspberry Pi.  Windows and macOS users are encouraged to install the [FileZilla Client](https://filezilla-project.org), which will also provide [PuTTY](https://putty.org) for SSH connections.  GNU/Linux users may install the `filezilla` package, but will also need to install a package such as `openssh-server` to make SSH connections.
-
-* **Config File:** After installing Hyper and FileZilla/PuTTY, a configuration script must be installed for SSH connections.  Windows users must [download this file](https://github.com/zeit/hyper/issues/1375) and save it as `C:\Program Files\hyper\hyper.js`.
+### Software Requirements
+We will be utilizing a Command Line Interface (CLI) on each laptop.  Students will communicate and control Raspberry Pi mini-computers via the Secure Shell (SSH) protocol.  The software below was chosen for compatibility and consistency across common desktop operating systems,
+* [Hyper](https://hyper.is) - Command Line Interface / Terminal Emulator
+* [Filezilla Client](https://filezilla-project.org) - SSH / SFTP Client
+* [Atom](https://atom.io) - Text Editor
+* [Git for Windows](https://gitforwindows.org) - Includes files that may be required for SSH on Windows
 
 ## Course Outline 
 
@@ -70,19 +74,19 @@ Students will connect to their Raspberry Pi devices from a terminal emulator/CLI
 * Command Line Basics
 * Controlling Your Raspberry Pi via SSH
 * Client/Server Model
-* Intro to File Permissions
+* The Filesystem Tree
 * Edit a File
 
 ### Week 3 - Operating Systems
-* What is an OS?
-* The Filesystem Tree
-* Superusers
+* Admin / Root Access
 * The Kernel
 * Userspace
+* Processes
+* Rootkits
 
 ### Week 4 - Ownership & Permissions
-* Admin / root Access
 * Permissions as a Structural Design for Security
+* Creating Users and Groups
 * Principle of Least Privilege
 * Sandboxing & Isolation
 * Privilege Escalation Attacks
@@ -117,8 +121,8 @@ Students will connect to their Raspberry Pi devices from a terminal emulator/CLI
 
 ### Week 9 - Anonymity & The Dark Web
 * Onion Routing (Tor)
-* Virtual Private Networks (VPNs)
 * Censorship Circumvention
+* Tor Config on FreedomBox
 * Sharing Files Anonymously
 * Cryptomarkets
 
