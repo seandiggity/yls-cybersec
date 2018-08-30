@@ -33,6 +33,12 @@
 \usepackage{amsthm}
 \VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
 
+%% symbols
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{amssymb}
+
 \definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
 \definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
 \definecolor{lightlightgray}{gray}{0.93}
@@ -68,7 +74,7 @@ LAW 20310, Fall 2018
 \rule{6.5in}{0.4pt}
 \begin{minipage}[t]{.75\textwidth}
 \begin{tabular}{llcccll}
-\textbf{Time:} Tuesday 10:00am -- 12:00 noon & \textbf{Place:} 40 Ashmun (Baker Hall), Rm 120 \\
+\textbf{Time:} Tuesday 10:00am--12:00 noon & \textbf{Place:} 40 Ashmun (Baker Hall), Rm 120 \\
 \end{tabular}
 \end{minipage}
 \rule{6.5in}{0.4pt}
@@ -77,48 +83,55 @@ LAW 20310, Fall 2018
 \renewcommand{\arraystretch}{2}
 \end{center}
 
-\noindent\textbf{Instructors:} \begin{itemize}
-\item Scott Shapiro, scott.shapiro@yale.edu \& Sean O'Brien, sean.obrien@yale.edu
-\item Assisted By - Laurin Weissinger, Cybersecurity Fellow, laurin.weissinger@yale.edu
+\noindent\textbf{Instructors:}
+\begin{itemize}
+\item[] Scott Shapiro, scott.shapiro@yale.edu \& Sean O'Brien, sean.obrien@yale.edu
+\item[] Assisted By -- Laurin Weissinger, Cybersecurity Fellow, laurin.weissinger@yale.edu
 \end{itemize}
 
-\noindent\textbf{Office Hours:} TBD
-\vspace{.1cm}
+\noindent\textbf{Office Hours:}
+\begin{itemize}
+\item[] Sean O’Brien -- Thursday, 4:30pm--5:30pm, Baker Hall 438
+\item[] Scott Shapiro -- Monday, 4:30pm--5:30pm, SLB 325
+\item[] Laurin Weissinger -- Wednesday, 11:00am--12:00 noon, Baker Hall 438
+\end{itemize}
 
 \noindent\textbf{Course Websites:} \begin{enumerate}
-\item Canvas CMS - \url{https://yale.instructure.com/courses/38230}
-\item Additional Resources - \url{https://github.com/seandiggity/yls-cybersec}
+\item Yale Canvas -- \url{https://yale.instructure.com/courses/38230}
+\item More Resources -- \url{https://github.com/seandiggity/yls-cybersec}
 \end{enumerate}
 
 \vskip.1in
 \noindent\textbf{Description and Objectives:}  This course is an introduction to cybersecurity, privacy, anonymity, and cryptography via hands-on activities. Students will learn cybersecurity and networking concepts so that they may better engage issues at the policy and regulatory level.
 
-\vskip.1in
+\vskip.2in
 \noindent\textbf{Technical Requirements:}
 A laptop computer is required for each class.  We will be utilizing a Command Line Interface (CLI) on each laptop.  Students will communicate and control Raspberry Pi mini-computers via the Secure Shell (SSH) protocol.  Please install the software below on the laptop you will use in class. 
 \begin{itemize}
-\item Hyper - \url{https://hyper.is} (Command Line Interface / Terminal Emulator)
-\item Filezilla Client - \url{https://filezilla-project.org} (SSH / SFTP Client)
-\item Atom - \url{https://atom.io} (Text Editor)
-\item Git for Windows - \url{https://gitforwindows.org} (Windows users only, required for SSH)
+\item Hyper -- \url{https://hyper.is} (Command Line Interface / Terminal Emulator)
+\item Filezilla Client -- \url{https://filezilla-project.org} (SSH / SFTP Client)
+\item Atom -- \url{https://atom.io} (Text Editor)
+\item Git for Windows -- \url{https://gitforwindows.org} (Windows users only, required for SSH)
 \end{itemize}
 
 \vskip.1in
 \noindent\textbf{Course Requirements:}
 \begin{itemize}
-\item \textbf{Attendance} - It is very important to attend each class -- indeed, attendance is mandatory.
-\item \textbf{Homework} -  Each class will conclude with a take-home assignment.  These must be completed to the satisfaction of the instructors.
-\item \textbf{Exam} - Your grade will be based on a take-home final exam.
+\item \textbf{Attendance} -- It is very important to attend each class. Attendance is mandatory.
+\item \textbf{Homework} -- Most classes conclude with a take-home assignment. It will be graded as \ding{51}+, \ding{51}, or \ding{51}--
+\item \textbf{Final Project} -- Video demonstration of three attacks/hacks with accompanying written description. Due by the last day of class.
+\item \textbf{Final Exam} -- Take home exam consisting of two questions, open-book, 24 hours to complete.
+\item \textbf{Grading} -- Homework (33\%); Final Project (33\%); Final Exam (33\%).
 \end{itemize}
 
-\vspace*{.1in}
-\noindent \textbf{Course Outline:}
+\pagebreak
+\noindent \textbf{\Large{Course Outline:}}
 
 \vspace*{.2in}
 \noindent\textbf{Week 1 -- Practical Cybersecurity}
 \begin{enumerate}
 \item Our Approach
-\item Digital Self-Defense %Move to 13? %% SO - renamed this to be more like what I have in mind.
+\item Digital Self-Defense
 \item Classroom Network Diagram
 \item Command Line Interface (CLI)
 \item Raspberry Pi Assembly
@@ -130,25 +143,25 @@ A laptop computer is required for each class.  We will be utilizing a Command Li
 \item Command Line Basics
 \item Controlling Your Raspberry Pi via SSH
 \item Client/Server Model
-\item Intro to File Permissions
+\item The Filesystem Tree
 \item Edit a File
 \end{enumerate}
 
 \vspace*{.1in}
 \noindent\textbf{Week 3 -- Operating Systems}
 \begin{enumerate}
-\item What is an OS?
-\item The Filesystem Tree
-\item Superusers
+\item Admin / Root Access
 \item The Kernel
 \item Userspace
+\item Processes
+\item Rootkits
 \end{enumerate}
 
 \vspace*{.1in}
 \noindent\textbf{Week 4 -- Ownership \& Permissions}
 \begin{enumerate}
-\item Admin / root Access
 \item Permissions as a Structural Design for Security
+\item Creating Users and Groups
 \item Principle of Least Privilege
 \item Sandboxing \& Isolation
 \item Privilege Escalation Attacks
@@ -201,7 +214,7 @@ A laptop computer is required for each class.  We will be utilizing a Command Li
 \item Virtual Private Networks (VPNs)
 \item Censorship Circumvention
 \item Sharing Files Anonymously
-\item Cryptomarkets %would do that last to lead over to next session.  %% SO - Sure, but I need to note to myself that attack attribution, traffic origin needs to be covered... that's obviously a big issue in international law.
+\item Cryptomarkets
 \end{enumerate}
 
 \vspace*{.1in}
