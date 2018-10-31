@@ -1,5 +1,5 @@
 # Seasonal Hacking
-## The PumkinPi Project
+## The Pumpkin Pi Project
 ### Yale Law School Cybersecurity (LAW 20301), Fall 2018
 
 ### Prepared by [Laurin Weissinger](https://twitter.com/LB_W_), Cyber Fellow
