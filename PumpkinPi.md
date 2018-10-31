@@ -1,8 +1,9 @@
 # Seasonal Hacking
 ## The Pumpkin Pi Project
 ### Yale Law School Cybersecurity (LAW 20301), Fall 2018
-
 ### Prepared by [Laurin Weissinger](https://twitter.com/LB_W_), Cyber Fellow
+
+<img src="/img/pumpkin_pi_06.jpg" width="220px" align="center" />
 
 ### Concept
 Build an easy and fun to hack excercise, which serves as a fun introduction to active IT Security research. As the class was one day before Halloween, a hackable Pumpkin was the obvious choice.
@@ -35,3 +36,23 @@ As we all know, many administrators do use weak credentials, and luckily, the Pu
 However, this was not enough! As mentioned before, I set a specific objective while not denying the root user any rights. Indeed, one student just used the "shutdown" command and turned off the Pi. I then explained that in hacking and security research, it is important to know one's objectives and not simply "break things", while restarting the PumpkinPi.
 
 On the system, I left some clues in the form of maintenance notes from one administrator to another -- an all too realistic scenario as many of us know too well. Using these notes, the students learned how to trigger python scripts via SSH. They also located the "maintenance" script I prepared, and successfully attained the objective of turning the light green. 
+
+### Video
+
+* [MP4 format](pumpkin_pi.m4v)
+
+### Photos
+
+<img src="/img/pumpkin_pi_06.jpg" width="220px" align="center" />
+
+<img src="/img/pumpkin_pi_01.jpg" width="220px" align="center" />
+
+<img src="/img/pumpkin_pi_02.jpg" width="220px" align="center" />
+
+<img src="/img/pumpkin_pi_03.jpg" width="220px" align="center" />
+
+<img src="/img/pumpkin_pi_04.jpg" width="220px" align="center" />
+
+<img src="/img/pumpkin_pi_05.jpg" width="220px" align="center" />
+
+<img src="/img/pumpkin_pi_vid.png" width="220px" align="center" />
