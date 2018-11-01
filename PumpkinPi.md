@@ -3,7 +3,7 @@
 ### Yale Law School Cybersecurity (LAW 20301), Fall 2018
 ### Prepared by [Laurin Weissinger](https://twitter.com/LB_W_), Cyber Fellow
 
-<img src="/img/pumpkin_pi_06.jpg" width="220px" align="center" />
+<img src="/img/pumpkin_pi_06.jpg" width="220px" align="right" />
 
 ### Concept
 Build an easy and fun to hack excercise, which serves as a fun introduction to active IT Security research. As the class was one day before Halloween, a hackable Pumpkin was the obvious choice.
